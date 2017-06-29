@@ -1,8 +1,9 @@
 $(function() {
     $.ajax({
-        url: 'https://www.codeschool.com/users/houstonj1',
+        url: 'https://www.codeschool.com/users/houstonj1.json',
         dataType: 'jsonp',
-        success: function() {
+        success: function(response) {
+            
             // success stuff
         }
     });
