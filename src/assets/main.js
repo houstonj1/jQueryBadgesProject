@@ -4,8 +4,9 @@ $(function() {
         dataType: 'jsonp',
         success: function(response) {
             // success stuff
-            for(badge in response.courses.completed) {
-                var item = $('<div class="course"></div>');
+            var object = response.courses.completed;
+            for(badge in object) {
+                var item = $('<div class="course"><h3>'+ object[badge].title+'</h3><img src="'+object[badge].badge+'"><a href="'+object[badge].url+'" target="_blank" class="btn btn-primary">See course</a></div>');
                 $('#badges').append(item);
             }
         }
